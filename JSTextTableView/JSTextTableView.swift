@@ -63,7 +63,7 @@ public class JSTextTableView: UITableView
       {
         self.addExpandableAttributedText(attributedText: attributedStringFromFile!,
                                          isExpanded: i%2==0,
-                                         title: "Shacharit")
+                                         title: "Shacharit \(i)")
       }
       self.reloadData()
     }
