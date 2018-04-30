@@ -1,0 +1,6 @@
+framework module EAScrollBar {
+  umbrella header "EAScrollBar-umbrella.h"
+
+  export *
+  module * { export * }
+}

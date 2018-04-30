@@ -7,11 +7,15 @@
 //
 
 import UIKit
+import RotatingArrowView
 
-internal class TextSuperCell:UITableViewCell
+internal class TextCell:UITableViewCell
 {
   // lets
-  internal let label = UILabel()
+  internal let label = InsetLabel()
+
+  // vars
+  internal var isExpanded = true
   
   // inits
   override internal init(style: UITableViewCellStyle,
@@ -20,6 +24,7 @@ internal class TextSuperCell:UITableViewCell
     super.init(style: style,
                reuseIdentifier: reuseIdentifier)
     
+    // set TextCell data
     self.addTextLabel()
     self.selectionStyle = .none
   }
@@ -32,60 +37,26 @@ internal class TextSuperCell:UITableViewCell
   // funcs
   public func addTextLabel()
   {
+    // set label data
     label.numberOfLines = 0
     
+    // constraints
     self.addSubview(label)
     label.translatesAutoresizingMaskIntoConstraints = false
     label.leftAnchor.constraint(equalTo:   self.leftAnchor).isActive   = true
     label.rightAnchor.constraint(equalTo:  self.rightAnchor).isActive  = true
     label.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+    label.topAnchor.constraint(equalTo:    self.topAnchor).isActive    = true
   }
 }
 
-internal class TextCell:TextSuperCell
-{
-  // inits
-  internal override init(style: UITableViewCellStyle,
-                         reuseIdentifier: String?)
-  {
-    super.init(style: style,
-               reuseIdentifier: reuseIdentifier)
-    
-    self.anchorLabelToTop()
-  }
-  
-  internal required init?(coder aDecoder: NSCoder)
-  {
-    fatalError("init(coder:) has not been implemented")
-  }
-  
-  // funcs
-  private func anchorLabelToTop()
-  {
-    self.label.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
-  }
-}
-
-internal class ExpandableTextCell:TextSuperCell
+internal class ExpandingTriggerCell:UITableViewCell
 {
   // lets
-  internal let expandView  = UIView()
-  internal let expandLabel = UILabel()
-  
-  // vars
-  // private
-  private var labelHeightConstraint = NSLayoutConstraint()
-  // internal static
-  internal static var expandViewHeight:CGFloat = 100.0
-  // public
-  public var isExpanded = false
-  {
-    didSet
-    {
-      labelHeightConstraint.isActive = !isExpanded
-      self.label.sizeToFit()
-    }
-  }
+  // internal
+  internal var mainView = UIView()
+  internal var arrowView:RotatingArrowView? = nil
+  internal var titleLabel = UILabel()
   
   // inits
   internal override init(style: UITableViewCellStyle,
@@ -106,63 +77,72 @@ internal class ExpandableTextCell:TextSuperCell
   // private
   private func startUp()
   {
-    makeExpandView()
-    makeExpandLabel()
-    makeTextLabelConstraints()
+    makeMainView()
+    addCenterView()
+    
+    self.selectionStyle = .none
   }
   
-  private func makeExpandView()
+  private func makeMainView()
   {
-    expandView.backgroundColor = UIColor.yellow
+    mainView.backgroundColor = UIColor.groupTableViewBackground
     
-    self.addSubview(expandView)
-    expandView.translatesAutoresizingMaskIntoConstraints = false
-    expandView.leftAnchor.constraint(equalTo:  self.leftAnchor).isActive  = true
-    expandView.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
-    expandView.topAnchor.constraint(equalTo:   self.topAnchor).isActive   = true
-    
-    // set the priority of the height lower to avoid layout issues
-    let heightConstraint = expandView.heightAnchor.constraint(equalToConstant: ExpandableTextCell.expandViewHeight)
-    heightConstraint.priority = UILayoutPriority(rawValue: 999.0)
-    heightConstraint.isActive = true
+    // constraints
+    self.addSubview(mainView)
+    mainView.translatesAutoresizingMaskIntoConstraints = false
+    mainView.leftAnchor.constraint(equalTo:   self.leftAnchor).isActive   = true
+    mainView.rightAnchor.constraint(equalTo:  self.rightAnchor).isActive  = true
+    mainView.topAnchor.constraint(equalTo:    self.topAnchor).isActive    = true
+    mainView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
   }
   
-  private func makeExpandLabel()
+  private func addCenterView()
   {
-    expandLabel.backgroundColor = UIColor.blue
-    expandLabel.text = "Expand"
-    expandLabel.sizeToFit()
-   
-    self.addSubview(expandLabel)
-    expandLabel.translatesAutoresizingMaskIntoConstraints = false
-    expandLabel.centerXAnchor.constraint(equalTo: expandView.centerXAnchor).isActive = true
-    expandLabel.centerYAnchor.constraint(equalTo: expandView.centerYAnchor).isActive = true
+    // make arrow view
+    arrowView = RotatingArrowView(frame: CGRect(x: 0.0,
+                                                y: 0.0,
+                                                width: self.frame.width/10,
+                                                height: self.frame.height))
     
+    // make center view
+    let centerView = UIView()
     
+    // add views to stackview
+    centerView.addSubview(arrowView!)
+    centerView.addSubview(titleLabel)
+    
+    // add arrow view constraints
+    arrowView?.translatesAutoresizingMaskIntoConstraints = false
+    arrowView?.leftAnchor.constraint(equalTo: centerView.leftAnchor).isActive     = true
+    arrowView?.topAnchor.constraint(equalTo: centerView.topAnchor).isActive       = true
+    arrowView?.bottomAnchor.constraint(equalTo: centerView.bottomAnchor).isActive = true
+    arrowView?.widthAnchor.constraint(equalToConstant: self.frame.width/10).isActive = true
+    arrowView?.rightAnchor.constraint(equalTo: titleLabel.leftAnchor, constant: -10.0).isActive = true
+    
+    // set title label data
+    titleLabel.font = UIFont.systemFont(ofSize: 20.0)
+    
+    // add title label constraints
+    titleLabel.translatesAutoresizingMaskIntoConstraints = false
+    titleLabel.rightAnchor.constraint(equalTo: centerView.rightAnchor).isActive = true
+    titleLabel.topAnchor.constraint(equalTo: centerView.topAnchor).isActive = true
+    titleLabel.bottomAnchor.constraint(equalTo: centerView.bottomAnchor).isActive = true
+    
+    // add stack view
+    self.addSubview(centerView)
+    
+    // make stack view constraints
+    centerView.translatesAutoresizingMaskIntoConstraints = false
+    centerView.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+    centerView.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
   }
-  
-  private func makeTextLabelConstraints()
-  {
-    self.label.topAnchor.constraint(equalTo: expandView.bottomAnchor).isActive = true
-    
-    labelHeightConstraint = NSLayoutConstraint(item: self.label,
-                                               attribute: .height,
-                                               relatedBy: .equal,
-                                               toItem: nil,
-                                               attribute: .notAnAttribute,
-                                               multiplier: 1.0,
-                                               constant: 0.0)
+}
 
-    labelHeightConstraint.isActive = true
-  }
-  
-  // public
-  public func expandCell()
+class InsetLabel:UILabel
+{
+  override func drawText(in rect: CGRect)
   {
-    isExpanded = true
-  }
-  public func collapseCell()
-  {
-    isExpanded = false
+    let insets = UIEdgeInsets.init(top: 5, left: 0, bottom: 5, right: 0)
+    super.drawText(in: UIEdgeInsetsInsetRect(rect, insets))
   }
 }

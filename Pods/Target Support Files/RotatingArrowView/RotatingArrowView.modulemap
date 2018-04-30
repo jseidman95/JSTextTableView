@@ -1,0 +1,6 @@
+framework module RotatingArrowView {
+  umbrella header "RotatingArrowView-umbrella.h"
+
+  export *
+  module * { export * }
+}

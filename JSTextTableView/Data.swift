@@ -8,9 +8,43 @@
 
 import UIKit
 
-public struct CellData
+// super protocols
+internal protocol CellData
 {
-  public var text:NSAttributedString
-  public var isExpandable:Bool
+  var isExpanded:Bool { get set }
+  var title:String    { get set }
+}
+
+// we do this so when the [CellData] is accessed the values can be changed without downcasting
+extension CellData
+{
+  var isExpanded:Bool
+  {
+    get { return true }
+    set {}
+  }
+  
+  var title:String
+  {
+    get { return "" }
+    set {}
+  }
+}
+
+// usable structs
+internal struct ExpandingTriggerData:CellData
+{
+  public var title:String
+}
+
+public struct AttributedTextData:CellData
+{
   public var isExpanded:Bool
+  public var attributedText:NSAttributedString
+}
+
+public struct RegularTextData:CellData
+{
+  public var isExpanded:Bool
+  public var text:String
 }
