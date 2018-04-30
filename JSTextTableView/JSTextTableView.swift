@@ -266,7 +266,10 @@ extension JSTextTableView
     var indicatorArray = [EAIndicatorPath]()
     for i in (0..<self.dataArray.count)
     {
-      indicatorArray.append(EAIndicatorPath(title: self.dataArray[i].title, indexPath: IndexPath(row: i, section: 0)))
+      if self.dataArray[i] is ExpandingTriggerData
+      {
+        indicatorArray.append(EAIndicatorPath(title: self.dataArray[i].title, indexPath: IndexPath(row: i, section: 0)))
+      }
     }
 
     scrollIndicator = EAScrollIndicator(scrollView: self,
@@ -277,6 +280,6 @@ extension JSTextTableView
   
   public override func didMoveToSuperview()
   {
-    //addScrollIndicator()
+    addScrollIndicator()
   }
 }
