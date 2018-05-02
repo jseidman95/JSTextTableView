@@ -420,12 +420,10 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-JSTextTableView/Pods-JSTextTableView-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/EAScrollBar/EAScrollBar.framework",
 				"${BUILT_PRODUCTS_DIR}/RotatingArrowView/RotatingArrowView.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EAScrollBar.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RotatingArrowView.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;

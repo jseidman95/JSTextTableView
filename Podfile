@@ -6,7 +6,6 @@ target 'JSTextTableView' do
   use_frameworks!
 
   # Pods for JSTextTableView
-  pod 'EAScrollBar'
   pod 'RotatingArrowView'
 
   target 'JSTextTableViewTests' do

@@ -1,15 +1,12 @@
 PODS:
-  - EAScrollBar (0.1.10)
   - RotatingArrowView (0.1.4)
 
 DEPENDENCIES:
-  - EAScrollBar
   - RotatingArrowView
 
 SPEC CHECKSUMS:
-  EAScrollBar: 9f81e13dc2861a9fda94c3e0e739f2b60b3784d6
   RotatingArrowView: 2b858fdc18f3718790845f4a3b33fab39619bfb5
 
-PODFILE CHECKSUM: 7d3d527c3cdfd75efd98f8c8ece63845eb5f5bbb
+PODFILE CHECKSUM: 76eb491ce2e34efaf8d6b1b8c162bc7ab898ca32
 
 COCOAPODS: 1.4.0

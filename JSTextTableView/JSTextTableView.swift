@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import EAScrollBar
 
 public class JSTextTableView: UITableView
 {
@@ -247,39 +246,5 @@ extension JSTextTableView: UITableViewDelegate
       }
       else { return UITableViewAutomaticDimension }
     }
-  }
-}
-
-// add scroll indicator
-extension JSTextTableView
-{
-  fileprivate func addScrollIndicator()
-  {
-    self.scrollIndicator = EAScrollIndicator(scrollView: self,
-                                             indicatorColor: UIColor.blue,
-                                             shadeColor: UIColor.black,
-                                             paths: [])
-    changeIndicatorPoints(from: 0)
-  }
-  
-  fileprivate func changeIndicatorPoints(from indexRow:Int)
-  {
-    for i in (indexRow..<self.dataArray.count)
-    {
-      if i < (self.scrollIndicator.points?.count)!
-      {
-        self.scrollIndicator.points![i] = EAIndicatorPoint(title: self.dataArray[i].title,
-                                                           location: self.rectForRow(at: IndexPath(row: i, section: 0)).minY)
-      }
-      else
-      {
-        self.scrollIndicator.points?.append(EAIndicatorPoint(title: self.dataArray[i].title,
-                                                             location: self.rectForRow(at: IndexPath(row: i, section: 0)).minY))
-      }
-    }
-  }
-  public override func didMoveToSuperview()
-  {
-    //addScrollIndicator()
   }
 }

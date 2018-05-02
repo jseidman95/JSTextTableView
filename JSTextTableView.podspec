@@ -15,5 +15,6 @@ A simply made, efficient UITableView
   s.ios.deployment_target = '9.0'
   s.swift_version = '4.0'
   s.source_files = 'JSTextTableView/*.swift', 'Pod/*'
- 
+
+  s.dependency 'RotatingArrowView' 
 end

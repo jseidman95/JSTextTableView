@@ -7,44 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		04A3F630C5ABF27F64E17D571295271F /* EAScrollTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7653EF8BF25E065E1F43FE5E2EAFC347 /* EAScrollTitleView.swift */; };
-		110C3DB09A9DE2F2A23543BE46237414 /* EAIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C468903804E1DE5C14B576AE80836E30 /* EAIndicator.swift */; };
-		18E6E0BB834E6FB358DE61FC0EF6823F /* EAIndicatorBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2723754117163958B43E88DDFEFEB8 /* EAIndicatorBackground.swift */; };
-		19D7A868826F22E66ECB6F50905AFE39 /* EAScrollBar-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C1658B50FC14D690C312219ECCA1D900 /* EAScrollBar-dummy.m */; };
+		00B4C54FC3689D0BC6732A9DD1DE927B /* Pods-JSTextTableView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D34F84B0FD25594D4A213C0ECE9CD55B /* Pods-JSTextTableView-dummy.m */; };
+		16F305F33EF6B57E123CF2B95C6A796C /* Pods-JSTextTableView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 317B14FE565AB1454ECF437C8D05E105 /* Pods-JSTextTableView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		453344A8D7CD4A4A066229E1532F305F /* RotatingArrowView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 76BAA4347E986E42444B37A8CBB6F508 /* RotatingArrowView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4881BDA7B92CDFD19B6ACA78CAFC6DC6 /* Pods-JSTextTableViewTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CEAD49AE6BDC1A093EDA6636C55F12DA /* Pods-JSTextTableViewTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4B0AEB41824AD0AA55BF25AA54FA6933 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		5F92E5FEC5438A3471A0E71154A0EA98 /* EAIndicatorPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6532950A54632B6FE21FD17D73F957B4 /* EAIndicatorPath.swift */; };
 		667ECA3CF4C5922D88F160AED09F619C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		7AC4291A6FFF911A1C41232A84C052C8 /* RotatingArrowView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AF63F2249E8F39DE2BF92FC5B2146C20 /* RotatingArrowView-dummy.m */; };
-		8307CAEB3638E135DACCD2860415BF0D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		83E59F487C84D375B0320A192FB82916 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		83926AC12B90F9051AC55C82993CF07C /* RotatingArrowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31B6B7A83A9B579A9CE884662684A42 /* RotatingArrowView.swift */; };
 		92E00018F39C3B4E01D21F4058D51CAB /* Pods-JSTextTableViewUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = ECAD7AE88B8D0A29DE46EAA293683397 /* Pods-JSTextTableViewUITests-dummy.m */; };
-		938CC766A32C61A701F6CF2CE81D390A /* Pods-JSTextTableView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D34F84B0FD25594D4A213C0ECE9CD55B /* Pods-JSTextTableView-dummy.m */; };
 		9906F2AF0B4F83F2B2A5D651AA207E24 /* Pods-JSTextTableViewTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 160227F8AE786A1B2B474CE1ED14C665 /* Pods-JSTextTableViewTests-dummy.m */; };
 		9FFB4B21CEA7DC15D2CCFE2DDBCB39FF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		AB5A706E8046117AFDF1109BDE371BA8 /* EAScrollIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E971A6617019416363E4DCE80BEC6114 /* EAScrollIndicator.swift */; };
-		C286D7E2027B7EF47B3CC5902121F3A2 /* Pods-JSTextTableView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 317B14FE565AB1454ECF437C8D05E105 /* Pods-JSTextTableView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C84ECEC994582BE993FD4FF67F8A6C7C /* Pods-JSTextTableViewUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DA4DE4053A9BADE7E3C6A9998E2120AF /* Pods-JSTextTableViewUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D6E92CB75C7686B6B487545634327625 /* EAIndicatorPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3FEA64A60CF724615D25BF880A02C1 /* EAIndicatorPoint.swift */; };
-		DAA4A3F8F8405F5559C6C1C64E9BAF24 /* RotatingArrowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A1C0AFA9F08DD712BAFCDBCFF869400 /* RotatingArrowView.swift */; };
-		EFF0D42CE9F8F0D9FB95489C4E34490E /* EAScrollBar-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 088208D4416A5FAB4E6FA0E87DFC4D63 /* EAScrollBar-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F2D185ECF971AAABA3B51FF2543EB77F /* RotatingArrowView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A22159087A48ED9752D21B5CFB7634E5 /* RotatingArrowView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FFBB68F7C501C9C1E5D9B4E654A7B727 /* EAIndicatorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B768A36CEC3CEE76AB609D68FE99713D /* EAIndicatorExtensions.swift */; };
+		E2630917865A50A6DF05361FE925A3AB /* RotatingArrowView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C5BAFFE712019C76C54D09C6A94C3810 /* RotatingArrowView-dummy.m */; };
+		F31B3168EBBE8AC7B77EDCAAD9FCB712 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		FD9FE277424269ADB57072765FB46E35 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		6E0A447F03B720FB12DAFF0B40BC299B /* PBXContainerItemProxy */ = {
+		FF65D543620CEC1479331A074C6DCC55 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = EA760EE1CCF7674ABE9C94151FDDF780;
-			remoteInfo = EAScrollBar;
-		};
-		D2F79C9987E5ED4ACECAAF2C64A1D0ED /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 9BBB0040A60529830326C50EBB93B7AE;
+			remoteGlobalIDString = 844BC51D3E6194CC8D4F4212E28D6E68;
 			remoteInfo = RotatingArrowView;
 		};
 /* End PBXContainerItemProxy section */
@@ -53,76 +36,62 @@
 		004690318B6F7EF07EF7255F2CE288F5 /* Pods-JSTextTableView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-JSTextTableView.modulemap"; sourceTree = "<group>"; };
 		008411E0CC9F6030320C1AC574BB9FAF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		009A659E5C1120FDC9A4D700DFB1CF3C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0127DE5BFAB46E66A97CA11F81F22034 /* Pods_JSTextTableViewUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_JSTextTableViewUITests.framework; path = "Pods-JSTextTableViewUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0523405A991A3832ECD1D2D5B7B193D3 /* Pods-JSTextTableViewUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JSTextTableViewUITests-acknowledgements.plist"; sourceTree = "<group>"; };
-		088208D4416A5FAB4E6FA0E87DFC4D63 /* EAScrollBar-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EAScrollBar-umbrella.h"; sourceTree = "<group>"; };
 		0B965AE9FA52150E3C2A36161822E44F /* Pods-JSTextTableView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JSTextTableView.release.xcconfig"; sourceTree = "<group>"; };
 		0CF28CD48569D6C497F12F2B1B7A7FF2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		13636261071A27DCD6A42AC7DF7E9144 /* Pods_JSTextTableViewUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_JSTextTableViewUITests.framework; path = "Pods-JSTextTableViewUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		138E648BDFB52885928ED0A11013B83A /* Pods_JSTextTableView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_JSTextTableView.framework; path = "Pods-JSTextTableView.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		160227F8AE786A1B2B474CE1ED14C665 /* Pods-JSTextTableViewTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JSTextTableViewTests-dummy.m"; sourceTree = "<group>"; };
-		2416E6E1E13E286265BC61F30975FB0D /* RotatingArrowView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RotatingArrowView.xcconfig; sourceTree = "<group>"; };
 		2929235EA9FB59183CB74C488E2CEBF8 /* Pods-JSTextTableViewUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JSTextTableViewUITests-resources.sh"; sourceTree = "<group>"; };
+		2CBE5B568B2C05777E2A4B4EBDBCBCD6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E7FDDCB006E68543FB81ECDBCFB0EAE /* Pods-JSTextTableViewTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JSTextTableViewTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		317B14FE565AB1454ECF437C8D05E105 /* Pods-JSTextTableView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JSTextTableView-umbrella.h"; sourceTree = "<group>"; };
-		33CDE70F3286B6D4003EF58D7516EBFE /* EAScrollBar-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EAScrollBar-prefix.pch"; sourceTree = "<group>"; };
-		3A722DDC1C1FE04DD0F5F6A97CCD331D /* EAScrollBar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = EAScrollBar.framework; path = EAScrollBar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		46508C14B59DE762FFEB5BD7215B18D7 /* EAScrollBar.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = EAScrollBar.xcconfig; sourceTree = "<group>"; };
 		4AB1E883E452492EAB215E6937329886 /* Pods-JSTextTableViewTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JSTextTableViewTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5ABFDFC07D50AF5EDC94C8B8B3C03230 /* Pods-JSTextTableViewUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-JSTextTableViewUITests.modulemap"; sourceTree = "<group>"; };
-		6478369BE5DED7EB3107DF4459F8EC68 /* Pods_JSTextTableView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_JSTextTableView.framework; path = "Pods-JSTextTableView.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6532950A54632B6FE21FD17D73F957B4 /* EAIndicatorPath.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EAIndicatorPath.swift; path = EAScrollBar/EAScrollBar/EAIndicatorPath.swift; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		666FADDD4D2B03831544B111C6CD4056 /* RotatingArrowView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RotatingArrowView-prefix.pch"; sourceTree = "<group>"; };
-		6A1C0AFA9F08DD712BAFCDBCFF869400 /* RotatingArrowView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RotatingArrowView.swift; path = RotatingArrowView/RotatingArrowView.swift; sourceTree = "<group>"; };
 		6FDFC2CDBA2EE7C8DD65F1A87C710799 /* Pods-JSTextTableView-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JSTextTableView-resources.sh"; sourceTree = "<group>"; };
 		74C0ADC280C047B012C2851CA8575ACA /* Pods-JSTextTableViewTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JSTextTableViewTests.release.xcconfig"; sourceTree = "<group>"; };
-		7653EF8BF25E065E1F43FE5E2EAFC347 /* EAScrollTitleView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EAScrollTitleView.swift; path = EAScrollBar/EAScrollBar/EAScrollTitleView.swift; sourceTree = "<group>"; };
+		76BAA4347E986E42444B37A8CBB6F508 /* RotatingArrowView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RotatingArrowView-umbrella.h"; sourceTree = "<group>"; };
 		7CDC87CED039CCC28EF11E6FE782D7EE /* Pods-JSTextTableViewUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JSTextTableViewUITests-frameworks.sh"; sourceTree = "<group>"; };
 		7E6F59316EE49B1FFC089A1BA0495D04 /* Pods-JSTextTableViewUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JSTextTableViewUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		7F3FEA64A60CF724615D25BF880A02C1 /* EAIndicatorPoint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EAIndicatorPoint.swift; path = EAScrollBar/EAScrollBar/EAIndicatorPoint.swift; sourceTree = "<group>"; };
-		7FE8D107D9E44BF6BBC5C5E9813E4124 /* RotatingArrowView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = RotatingArrowView.modulemap; sourceTree = "<group>"; };
+		80D32CBB539847472967BDBD12512BED /* RotatingArrowView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = RotatingArrowView.framework; path = RotatingArrowView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8234FE5E6C84DA088D0B50283039942B /* RotatingArrowView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RotatingArrowView.xcconfig; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		94C624BADC25DB5695804D3F06528E49 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		97B2F6909DAB190001DBA86B66483B10 /* Pods-JSTextTableView-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JSTextTableView-acknowledgements.plist"; sourceTree = "<group>"; };
-		9C2723754117163958B43E88DDFEFEB8 /* EAIndicatorBackground.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EAIndicatorBackground.swift; path = EAScrollBar/EAScrollBar/EAIndicatorBackground.swift; sourceTree = "<group>"; };
-		A22159087A48ED9752D21B5CFB7634E5 /* RotatingArrowView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RotatingArrowView-umbrella.h"; sourceTree = "<group>"; };
+		989E13650D7E95EB41500D6AA447F806 /* Pods_JSTextTableViewTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_JSTextTableViewTests.framework; path = "Pods-JSTextTableViewTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A22228F7E7A072B47576DAB79BC45CAD /* Pods-JSTextTableView-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JSTextTableView-acknowledgements.markdown"; sourceTree = "<group>"; };
 		A317BD4A2AA6900B44A4935F3181B2D7 /* Pods-JSTextTableView-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JSTextTableView-frameworks.sh"; sourceTree = "<group>"; };
-		A7E320A722BDF47B60CAA36D7613ED9B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AF63F2249E8F39DE2BF92FC5B2146C20 /* RotatingArrowView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "RotatingArrowView-dummy.m"; sourceTree = "<group>"; };
-		B52D05ADB1DAE228A96B19B378CC2214 /* EAScrollBar.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = EAScrollBar.modulemap; sourceTree = "<group>"; };
-		B768A36CEC3CEE76AB609D68FE99713D /* EAIndicatorExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EAIndicatorExtensions.swift; path = EAScrollBar/EAScrollBar/EAIndicatorExtensions.swift; sourceTree = "<group>"; };
+		A4EAB4F00E0DD115963894D31C3C9355 /* RotatingArrowView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = RotatingArrowView.modulemap; sourceTree = "<group>"; };
 		BA69233C45713C60E09E870707447882 /* Pods-JSTextTableViewTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-JSTextTableViewTests.modulemap"; sourceTree = "<group>"; };
-		C1658B50FC14D690C312219ECCA1D900 /* EAScrollBar-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "EAScrollBar-dummy.m"; sourceTree = "<group>"; };
 		C2CF6050D0F77DE7D8CD04CE895FE613 /* Pods-JSTextTableView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JSTextTableView.debug.xcconfig"; sourceTree = "<group>"; };
-		C468903804E1DE5C14B576AE80836E30 /* EAIndicator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EAIndicator.swift; path = EAScrollBar/EAScrollBar/EAIndicator.swift; sourceTree = "<group>"; };
+		C5BAFFE712019C76C54D09C6A94C3810 /* RotatingArrowView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "RotatingArrowView-dummy.m"; sourceTree = "<group>"; };
 		C6C344F0D9F98AE8F46253356F32CD9B /* Pods-JSTextTableViewUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JSTextTableViewUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		CEAD49AE6BDC1A093EDA6636C55F12DA /* Pods-JSTextTableViewTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JSTextTableViewTests-umbrella.h"; sourceTree = "<group>"; };
 		CF83E4ECB5951D5FDD84AED936416562 /* Pods-JSTextTableViewTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JSTextTableViewTests-resources.sh"; sourceTree = "<group>"; };
 		D34F84B0FD25594D4A213C0ECE9CD55B /* Pods-JSTextTableView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JSTextTableView-dummy.m"; sourceTree = "<group>"; };
 		DA4DE4053A9BADE7E3C6A9998E2120AF /* Pods-JSTextTableViewUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JSTextTableViewUITests-umbrella.h"; sourceTree = "<group>"; };
-		DB7E6E9B33262EF0E950CE2DB562DA59 /* Pods_JSTextTableViewTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_JSTextTableViewTests.framework; path = "Pods-JSTextTableViewTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E971A6617019416363E4DCE80BEC6114 /* EAScrollIndicator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EAScrollIndicator.swift; path = EAScrollBar/EAScrollBar/EAScrollIndicator.swift; sourceTree = "<group>"; };
+		E31B6B7A83A9B579A9CE884662684A42 /* RotatingArrowView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RotatingArrowView.swift; path = RotatingArrowView/RotatingArrowView.swift; sourceTree = "<group>"; };
 		EC0B734F101377FC0417C1C54B5AA9FF /* Pods-JSTextTableViewTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JSTextTableViewTests-frameworks.sh"; sourceTree = "<group>"; };
 		EC2736080FB39D51E526DFAE24BD31E5 /* Pods-JSTextTableViewTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JSTextTableViewTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		ECAD7AE88B8D0A29DE46EAA293683397 /* Pods-JSTextTableViewUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JSTextTableViewUITests-dummy.m"; sourceTree = "<group>"; };
-		EF018FA2D53593A1CFABC510F6F5D86E /* RotatingArrowView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = RotatingArrowView.framework; path = RotatingArrowView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7A56A5500B1A780F7363389624F4745 /* Pods-JSTextTableViewUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JSTextTableViewUITests.release.xcconfig"; sourceTree = "<group>"; };
+		FE3E045B3124D00BD0C9417CA8E21053 /* RotatingArrowView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RotatingArrowView-prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		086D68A57AB96D5A2330DF7A86C720DC /* Frameworks */ = {
+		022FE93F41E96B836DE3F42FBCECF2F1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8307CAEB3638E135DACCD2860415BF0D /* Foundation.framework in Frameworks */,
+				FD9FE277424269ADB57072765FB46E35 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E02C325C267E1CFBB4D52D76034ADE5D /* Frameworks */ = {
+		5342726D29443C2A1AEF5E32B22F8F8B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4B0AEB41824AD0AA55BF25AA54FA6933 /* Foundation.framework in Frameworks */,
+				F31B3168EBBE8AC7B77EDCAAD9FCB712 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,17 +111,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FFF3AA6F7DFB4DF0856A9DD5908C167F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				83E59F487C84D375B0320A192FB82916 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		02893201D2B50A95BECCEFA3D93183E1 /* RotatingArrowView */ = {
+			isa = PBXGroup;
+			children = (
+				E31B6B7A83A9B579A9CE884662684A42 /* RotatingArrowView.swift */,
+				1315A4F8BE8E505CBB45772D3FF32E8B /* Support Files */,
+			);
+			name = RotatingArrowView;
+			path = RotatingArrowView;
+			sourceTree = "<group>";
+		};
 		0AAC3BC1AFF22719AEC44E1E7FE61E11 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -163,15 +134,15 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		0C059600945646FE4012C893438556E2 /* Support Files */ = {
+		1315A4F8BE8E505CBB45772D3FF32E8B /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				A7E320A722BDF47B60CAA36D7613ED9B /* Info.plist */,
-				7FE8D107D9E44BF6BBC5C5E9813E4124 /* RotatingArrowView.modulemap */,
-				2416E6E1E13E286265BC61F30975FB0D /* RotatingArrowView.xcconfig */,
-				AF63F2249E8F39DE2BF92FC5B2146C20 /* RotatingArrowView-dummy.m */,
-				666FADDD4D2B03831544B111C6CD4056 /* RotatingArrowView-prefix.pch */,
-				A22159087A48ED9752D21B5CFB7634E5 /* RotatingArrowView-umbrella.h */,
+				2CBE5B568B2C05777E2A4B4EBDBCBCD6 /* Info.plist */,
+				A4EAB4F00E0DD115963894D31C3C9355 /* RotatingArrowView.modulemap */,
+				8234FE5E6C84DA088D0B50283039942B /* RotatingArrowView.xcconfig */,
+				C5BAFFE712019C76C54D09C6A94C3810 /* RotatingArrowView-dummy.m */,
+				FE3E045B3124D00BD0C9417CA8E21053 /* RotatingArrowView-prefix.pch */,
+				76BAA4347E986E42444B37A8CBB6F508 /* RotatingArrowView-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/RotatingArrowView";
@@ -231,39 +202,34 @@
 			path = "Target Support Files/Pods-JSTextTableViewUITests";
 			sourceTree = "<group>";
 		};
-		7896791EC00A268EFF840FF139E89862 /* RotatingArrowView */ = {
-			isa = PBXGroup;
-			children = (
-				6A1C0AFA9F08DD712BAFCDBCFF869400 /* RotatingArrowView.swift */,
-				0C059600945646FE4012C893438556E2 /* Support Files */,
-			);
-			name = RotatingArrowView;
-			path = RotatingArrowView;
-			sourceTree = "<group>";
-		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				E94754ACC1747535232C492A80358C14 /* Pods */,
-				C6D1D350F9680C893347E7B6398FC5CC /* Products */,
+				9270A969DC3B71F094FC25F513802FC4 /* Pods */,
+				9E76981ED42535124CA4AA25C35E63C5 /* Products */,
 				0AAC3BC1AFF22719AEC44E1E7FE61E11 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		94484ED6C744FD26C443B87AED4A583E /* Support Files */ = {
+		9270A969DC3B71F094FC25F513802FC4 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				B52D05ADB1DAE228A96B19B378CC2214 /* EAScrollBar.modulemap */,
-				46508C14B59DE762FFEB5BD7215B18D7 /* EAScrollBar.xcconfig */,
-				C1658B50FC14D690C312219ECCA1D900 /* EAScrollBar-dummy.m */,
-				33CDE70F3286B6D4003EF58D7516EBFE /* EAScrollBar-prefix.pch */,
-				088208D4416A5FAB4E6FA0E87DFC4D63 /* EAScrollBar-umbrella.h */,
-				94C624BADC25DB5695804D3F06528E49 /* Info.plist */,
+				02893201D2B50A95BECCEFA3D93183E1 /* RotatingArrowView */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/EAScrollBar";
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9E76981ED42535124CA4AA25C35E63C5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				138E648BDFB52885928ED0A11013B83A /* Pods_JSTextTableView.framework */,
+				989E13650D7E95EB41500D6AA447F806 /* Pods_JSTextTableViewTests.framework */,
+				13636261071A27DCD6A42AC7DF7E9144 /* Pods_JSTextTableViewUITests.framework */,
+				80D32CBB539847472967BDBD12512BED /* RotatingArrowView.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -274,18 +240,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		C6D1D350F9680C893347E7B6398FC5CC /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				3A722DDC1C1FE04DD0F5F6A97CCD331D /* EAScrollBar.framework */,
-				6478369BE5DED7EB3107DF4459F8EC68 /* Pods_JSTextTableView.framework */,
-				DB7E6E9B33262EF0E950CE2DB562DA59 /* Pods_JSTextTableViewTests.framework */,
-				0127DE5BFAB46E66A97CA11F81F22034 /* Pods_JSTextTableViewUITests.framework */,
-				EF018FA2D53593A1CFABC510F6F5D86E /* RotatingArrowView.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -294,34 +248,17 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		E7764B476477D5A80BE771D998A9DC66 /* EAScrollBar */ = {
-			isa = PBXGroup;
-			children = (
-				C468903804E1DE5C14B576AE80836E30 /* EAIndicator.swift */,
-				9C2723754117163958B43E88DDFEFEB8 /* EAIndicatorBackground.swift */,
-				B768A36CEC3CEE76AB609D68FE99713D /* EAIndicatorExtensions.swift */,
-				6532950A54632B6FE21FD17D73F957B4 /* EAIndicatorPath.swift */,
-				7F3FEA64A60CF724615D25BF880A02C1 /* EAIndicatorPoint.swift */,
-				E971A6617019416363E4DCE80BEC6114 /* EAScrollIndicator.swift */,
-				7653EF8BF25E065E1F43FE5E2EAFC347 /* EAScrollTitleView.swift */,
-				94484ED6C744FD26C443B87AED4A583E /* Support Files */,
-			);
-			name = EAScrollBar;
-			path = EAScrollBar;
-			sourceTree = "<group>";
-		};
-		E94754ACC1747535232C492A80358C14 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				E7764B476477D5A80BE771D998A9DC66 /* EAScrollBar */,
-				7896791EC00A268EFF840FF139E89862 /* RotatingArrowView */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		08027CA6B17BCA86BBF80A5C33E8AB4F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16F305F33EF6B57E123CF2B95C6A796C /* Pods-JSTextTableView-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0CC06144B9075B5AB71C0EBA525A9149 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -338,59 +275,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		90201EFA50EB110B04DECB504B367E0A /* Headers */ = {
+		C495FA17EF5F315108FA695ACB4F0D5B /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2D185ECF971AAABA3B51FF2543EB77F /* RotatingArrowView-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		92F998C6DE47B52AE8FE017323B52B76 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C286D7E2027B7EF47B3CC5902121F3A2 /* Pods-JSTextTableView-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CBD38479422B3825529BFD62A3B5E6AF /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EFF0D42CE9F8F0D9FB95489C4E34490E /* EAScrollBar-umbrella.h in Headers */,
+				453344A8D7CD4A4A066229E1532F305F /* RotatingArrowView-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		02C78D9AA342A1D4DF1C71A9DC2BCB64 /* Pods-JSTextTableView */ = {
+		844BC51D3E6194CC8D4F4212E28D6E68 /* RotatingArrowView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 02EAF52BCD1E5B1D70A5812EB0D0B57C /* Build configuration list for PBXNativeTarget "Pods-JSTextTableView" */;
+			buildConfigurationList = B92F56C97E86CCE4F5340BC427A13E1C /* Build configuration list for PBXNativeTarget "RotatingArrowView" */;
 			buildPhases = (
-				F9C71A42CD641906788368B1662BD123 /* Sources */,
-				FFF3AA6F7DFB4DF0856A9DD5908C167F /* Frameworks */,
-				92F998C6DE47B52AE8FE017323B52B76 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				0219752F3888361AEDAD078129D16639 /* PBXTargetDependency */,
-				2080511D6ED2EDC4E172578855962A44 /* PBXTargetDependency */,
-			);
-			name = "Pods-JSTextTableView";
-			productName = "Pods-JSTextTableView";
-			productReference = 6478369BE5DED7EB3107DF4459F8EC68 /* Pods_JSTextTableView.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		9BBB0040A60529830326C50EBB93B7AE /* RotatingArrowView */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 744877582ABF8C81C4777710EEAB5894 /* Build configuration list for PBXNativeTarget "RotatingArrowView" */;
-			buildPhases = (
-				2B1E5058332A200C30C2ABC1BD5EBB01 /* Sources */,
-				086D68A57AB96D5A2330DF7A86C720DC /* Frameworks */,
-				90201EFA50EB110B04DECB504B367E0A /* Headers */,
+				84F7BC1A5E6BFAB2A5533F00C99A2ACB /* Sources */,
+				022FE93F41E96B836DE3F42FBCECF2F1 /* Frameworks */,
+				C495FA17EF5F315108FA695ACB4F0D5B /* Headers */,
 			);
 			buildRules = (
 			);
@@ -398,7 +300,25 @@
 			);
 			name = RotatingArrowView;
 			productName = RotatingArrowView;
-			productReference = EF018FA2D53593A1CFABC510F6F5D86E /* RotatingArrowView.framework */;
+			productReference = 80D32CBB539847472967BDBD12512BED /* RotatingArrowView.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A8D1D0530E30D362414933A1ED4F1055 /* Pods-JSTextTableView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD48605F4AEF3CE90E0DC99D6DF65074 /* Build configuration list for PBXNativeTarget "Pods-JSTextTableView" */;
+			buildPhases = (
+				D6D199EDC12F61A8BFFB40ED0333DC61 /* Sources */,
+				5342726D29443C2A1AEF5E32B22F8F8B /* Frameworks */,
+				08027CA6B17BCA86BBF80A5C33E8AB4F /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D7FB5B499492C3F96FC8EC0038299989 /* PBXTargetDependency */,
+			);
+			name = "Pods-JSTextTableView";
+			productName = "Pods-JSTextTableView";
+			productReference = 138E648BDFB52885928ED0A11013B83A /* Pods_JSTextTableView.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		E38EBBA3A52855375AEFCABCBFBA4134 /* Pods-JSTextTableViewUITests */ = {
@@ -415,24 +335,7 @@
 			);
 			name = "Pods-JSTextTableViewUITests";
 			productName = "Pods-JSTextTableViewUITests";
-			productReference = 0127DE5BFAB46E66A97CA11F81F22034 /* Pods_JSTextTableViewUITests.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		EA760EE1CCF7674ABE9C94151FDDF780 /* EAScrollBar */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 59A2DB908E540956B9CA617AA8F7F173 /* Build configuration list for PBXNativeTarget "EAScrollBar" */;
-			buildPhases = (
-				6C584B1C68D850AD16AF592DD4D95D34 /* Sources */,
-				E02C325C267E1CFBB4D52D76034ADE5D /* Frameworks */,
-				CBD38479422B3825529BFD62A3B5E6AF /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = EAScrollBar;
-			productName = EAScrollBar;
-			productReference = 3A722DDC1C1FE04DD0F5F6A97CCD331D /* EAScrollBar.framework */;
+			productReference = 13636261071A27DCD6A42AC7DF7E9144 /* Pods_JSTextTableViewUITests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		EB6AABB4A235284CC76C6634CB62EFA9 /* Pods-JSTextTableViewTests */ = {
@@ -449,7 +352,7 @@
 			);
 			name = "Pods-JSTextTableViewTests";
 			productName = "Pods-JSTextTableViewTests";
-			productReference = DB7E6E9B33262EF0E950CE2DB562DA59 /* Pods_JSTextTableViewTests.framework */;
+			productReference = 989E13650D7E95EB41500D6AA447F806 /* Pods_JSTextTableViewTests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -469,29 +372,19 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = C6D1D350F9680C893347E7B6398FC5CC /* Products */;
+			productRefGroup = 9E76981ED42535124CA4AA25C35E63C5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				EA760EE1CCF7674ABE9C94151FDDF780 /* EAScrollBar */,
-				02C78D9AA342A1D4DF1C71A9DC2BCB64 /* Pods-JSTextTableView */,
+				A8D1D0530E30D362414933A1ED4F1055 /* Pods-JSTextTableView */,
 				EB6AABB4A235284CC76C6634CB62EFA9 /* Pods-JSTextTableViewTests */,
 				E38EBBA3A52855375AEFCABCBFBA4134 /* Pods-JSTextTableViewUITests */,
-				9BBB0040A60529830326C50EBB93B7AE /* RotatingArrowView */,
+				844BC51D3E6194CC8D4F4212E28D6E68 /* RotatingArrowView */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		2B1E5058332A200C30C2ABC1BD5EBB01 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7AC4291A6FFF911A1C41232A84C052C8 /* RotatingArrowView-dummy.m in Sources */,
-				DAA4A3F8F8405F5559C6C1C64E9BAF24 /* RotatingArrowView.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		501B5C7D2202CC7339685D825153D6D6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -500,18 +393,12 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6C584B1C68D850AD16AF592DD4D95D34 /* Sources */ = {
+		84F7BC1A5E6BFAB2A5533F00C99A2ACB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				110C3DB09A9DE2F2A23543BE46237414 /* EAIndicator.swift in Sources */,
-				18E6E0BB834E6FB358DE61FC0EF6823F /* EAIndicatorBackground.swift in Sources */,
-				FFBB68F7C501C9C1E5D9B4E654A7B727 /* EAIndicatorExtensions.swift in Sources */,
-				5F92E5FEC5438A3471A0E71154A0EA98 /* EAIndicatorPath.swift in Sources */,
-				D6E92CB75C7686B6B487545634327625 /* EAIndicatorPoint.swift in Sources */,
-				19D7A868826F22E66ECB6F50905AFE39 /* EAScrollBar-dummy.m in Sources */,
-				AB5A706E8046117AFDF1109BDE371BA8 /* EAScrollIndicator.swift in Sources */,
-				04A3F630C5ABF27F64E17D571295271F /* EAScrollTitleView.swift in Sources */,
+				E2630917865A50A6DF05361FE925A3AB /* RotatingArrowView-dummy.m in Sources */,
+				83926AC12B90F9051AC55C82993CF07C /* RotatingArrowView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -523,28 +410,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F9C71A42CD641906788368B1662BD123 /* Sources */ = {
+		D6D199EDC12F61A8BFFB40ED0333DC61 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				938CC766A32C61A701F6CF2CE81D390A /* Pods-JSTextTableView-dummy.m in Sources */,
+				00B4C54FC3689D0BC6732A9DD1DE927B /* Pods-JSTextTableView-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		0219752F3888361AEDAD078129D16639 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = EAScrollBar;
-			target = EA760EE1CCF7674ABE9C94151FDDF780 /* EAScrollBar */;
-			targetProxy = 6E0A447F03B720FB12DAFF0B40BC299B /* PBXContainerItemProxy */;
-		};
-		2080511D6ED2EDC4E172578855962A44 /* PBXTargetDependency */ = {
+		D7FB5B499492C3F96FC8EC0038299989 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = RotatingArrowView;
-			target = 9BBB0040A60529830326C50EBB93B7AE /* RotatingArrowView */;
-			targetProxy = D2F79C9987E5ED4ACECAAF2C64A1D0ED /* PBXContainerItemProxy */;
+			target = 844BC51D3E6194CC8D4F4212E28D6E68 /* RotatingArrowView */;
+			targetProxy = FF65D543620CEC1479331A074C6DCC55 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -582,37 +463,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
-		};
-		1E3B20F485DA866948D30A504F85F860 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2416E6E1E13E286265BC61F30975FB0D /* RotatingArrowView.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/RotatingArrowView/RotatingArrowView-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/RotatingArrowView/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/RotatingArrowView/RotatingArrowView.modulemap";
-				PRODUCT_NAME = RotatingArrowView;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
 		};
 		323A24856F1A4871A780301AF5C02A2A /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -677,6 +527,72 @@
 			};
 			name = Debug;
 		};
+		3FB27DFA10E2E776B85CEA8498D8D513 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0B965AE9FA52150E3C2A36161822E44F /* Pods-JSTextTableView.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-JSTextTableView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-JSTextTableView/Pods-JSTextTableView.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_JSTextTableView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		477B36435B9BBD2436EC67C3CADCC744 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8234FE5E6C84DA088D0B50283039942B /* RotatingArrowView.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/RotatingArrowView/RotatingArrowView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/RotatingArrowView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/RotatingArrowView/RotatingArrowView.modulemap";
+				PRODUCT_NAME = RotatingArrowView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		4AFBFB0AEEE19D087F2CE98B5354FB6E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4AB1E883E452492EAB215E6937329886 /* Pods-JSTextTableViewTests.debug.xcconfig */;
@@ -704,41 +620,6 @@
 				PRODUCT_NAME = Pods_JSTextTableViewTests;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		543098ED223336DFA468A7FB945B3DB9 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C2CF6050D0F77DE7D8CD04CE895FE613 /* Pods-JSTextTableView.debug.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-JSTextTableView/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-JSTextTableView/Pods-JSTextTableView.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_JSTextTableView;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -778,77 +659,9 @@
 			};
 			name = Debug;
 		};
-		6D65C69088CCC8483012E938742EAFFD /* Release */ = {
+		81FA0361AEB7E0E0B56D4B1D841B2E63 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 46508C14B59DE762FFEB5BD7215B18D7 /* EAScrollBar.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/EAScrollBar/EAScrollBar-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/EAScrollBar/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/EAScrollBar/EAScrollBar.modulemap";
-				PRODUCT_NAME = EAScrollBar;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		C629DD764E9CED2110FB624F767F8073 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0B965AE9FA52150E3C2A36161822E44F /* Pods-JSTextTableView.release.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-JSTextTableView/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-JSTextTableView/Pods-JSTextTableView.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_JSTextTableView;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		C7D2058693499B894089E795B855B8B2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2416E6E1E13E286265BC61F30975FB0D /* RotatingArrowView.xcconfig */;
+			baseConfigurationReference = 8234FE5E6C84DA088D0B50283039942B /* RotatingArrowView.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -936,6 +749,41 @@
 			};
 			name = Release;
 		};
+		CE4EA03A3CB29A980BF905CA5108D6C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C2CF6050D0F77DE7D8CD04CE895FE613 /* Pods-JSTextTableView.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-JSTextTableView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-JSTextTableView/Pods-JSTextTableView.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_JSTextTableView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		E23AA53FC981F46F3B080A9584B226AC /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F7A56A5500B1A780F7363389624F4745 /* Pods-JSTextTableViewUITests.release.xcconfig */;
@@ -970,50 +818,9 @@
 			};
 			name = Release;
 		};
-		E2F71A55AFC3908AC4F843FB60BB1E78 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 46508C14B59DE762FFEB5BD7215B18D7 /* EAScrollBar.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/EAScrollBar/EAScrollBar-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/EAScrollBar/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/EAScrollBar/EAScrollBar.modulemap";
-				PRODUCT_NAME = EAScrollBar;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		02EAF52BCD1E5B1D70A5812EB0D0B57C /* Build configuration list for PBXNativeTarget "Pods-JSTextTableView" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				543098ED223336DFA468A7FB945B3DB9 /* Debug */,
-				C629DD764E9CED2110FB624F767F8073 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1032,20 +839,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		59A2DB908E540956B9CA617AA8F7F173 /* Build configuration list for PBXNativeTarget "EAScrollBar" */ = {
+		B92F56C97E86CCE4F5340BC427A13E1C /* Build configuration list for PBXNativeTarget "RotatingArrowView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E2F71A55AFC3908AC4F843FB60BB1E78 /* Debug */,
-				6D65C69088CCC8483012E938742EAFFD /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		744877582ABF8C81C4777710EEAB5894 /* Build configuration list for PBXNativeTarget "RotatingArrowView" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1E3B20F485DA866948D30A504F85F860 /* Debug */,
-				C7D2058693499B894089E795B855B8B2 /* Release */,
+				477B36435B9BBD2436EC67C3CADCC744 /* Debug */,
+				81FA0361AEB7E0E0B56D4B1D841B2E63 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1055,6 +853,15 @@
 			buildConfigurations = (
 				54D2DEE898CD9D95BC581EFFA7B23446 /* Debug */,
 				E23AA53FC981F46F3B080A9584B226AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DD48605F4AEF3CE90E0DC99D6DF65074 /* Build configuration list for PBXNativeTarget "Pods-JSTextTableView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE4EA03A3CB29A980BF905CA5108D6C2 /* Debug */,
+				3FB27DFA10E2E776B85CEA8498D8D513 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
