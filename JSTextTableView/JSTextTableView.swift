@@ -20,7 +20,6 @@ public class JSTextTableView: UITableView
   private var cellHeightDictionary:[IndexPath:CGFloat] = [:]
   private var dataArray = [CellData]()
   private var lastOrientation:UIDeviceOrientation = .portrait
-  private var scrollIndicator = EAScrollIndicator()
   
   // public static
   public static var arrowColor:UIColor = UIColor.blue

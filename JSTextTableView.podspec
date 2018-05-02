@@ -12,7 +12,7 @@ A simply made, efficient UITableView
   s.author           = { 'Jesse Seidman' => 'jseidman95@yahoo.com' }
   s.source           = { :git => 'https://github.com/jseidman95/JSTextTableView.git', :tag => s.version.to_s }
  
-  s.ios.deployment_target = '9.0'
+  s.ios.deployment_target = '11.0'
   s.swift_version = '4.0'
   s.source_files = 'JSTextTableView/*.swift', 'Pod/*'
 
