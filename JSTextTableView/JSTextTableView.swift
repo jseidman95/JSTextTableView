@@ -23,6 +23,9 @@ public class JSTextTableView: UITableView
   private var lastOrientation:UIDeviceOrientation = .portrait
   private var scrollIndicator = EAScrollIndicator()
   
+  // public static
+  public static var arrowColor:UIColor = UIColor.blue
+  
   // inits
   public override init(frame: CGRect, style: UITableViewStyle)
   {
@@ -53,21 +56,6 @@ public class JSTextTableView: UITableView
     // set table view data
     self.separatorStyle = .none
     
-    if let rtfPath = Bundle.main.url(forResource: "shachritAshkinaz", withExtension: "rtf")
-    {
-      let attributedStringFromFile = try? NSAttributedString(url: rtfPath,
-                                                         options: [NSAttributedString.DocumentReadingOptionKey.documentType:NSAttributedString.DocumentType.rtf],
-                                                         documentAttributes: nil)
-      
-      for i in (0...23)
-      {
-        self.addExpandableAttributedText(attributedText: attributedStringFromFile!,
-                                         isExpanded: i%2==0,
-                                         title: "Shacharit \(i)")
-      }
-      self.reloadData()
-    }
-
     // set initial orientation
     lastOrientation = UIDevice.current.orientation
   }
@@ -79,7 +67,8 @@ public class JSTextTableView: UITableView
   {
     dataArray.append(ExpandingTriggerData(title: title))
     dataArray.append(RegularTextData(isExpanded: isExpanded,
-                                     text: text))
+                                     text: text,
+                                     title: title))
   }
   
   public func addExpandableAttributedText(attributedText:NSAttributedString,
@@ -88,7 +77,8 @@ public class JSTextTableView: UITableView
   {
     dataArray.append(ExpandingTriggerData(title: title))
     dataArray.append(AttributedTextData(isExpanded: isExpanded,
-                                        attributedText: attributedText))
+                                        attributedText: attributedText,
+                                        title: title))
   }
   
   public func addNonExpandableRegularText(text:String,
@@ -96,7 +86,8 @@ public class JSTextTableView: UITableView
   {
     // make data
     var data = RegularTextData(isExpanded: true,
-                               text: text)
+                               text: text,
+                               title: title)
     data.title = title
     
     // append data
@@ -108,9 +99,10 @@ public class JSTextTableView: UITableView
   {
     // make data
     var data = AttributedTextData(isExpanded: true,
-                                  attributedText: attributedText)
+                                  attributedText: attributedText,
+                                  title: title)
     data.title = title
-    
+    print(data.title)
     // append data
     dataArray.append(data)
   }
@@ -263,23 +255,31 @@ extension JSTextTableView
 {
   fileprivate func addScrollIndicator()
   {
-    var indicatorArray = [EAIndicatorPath]()
-    for i in (0..<self.dataArray.count)
-    {
-      if self.dataArray[i] is ExpandingTriggerData
-      {
-        indicatorArray.append(EAIndicatorPath(title: self.dataArray[i].title, indexPath: IndexPath(row: i, section: 0)))
-      }
-    }
-
-    scrollIndicator = EAScrollIndicator(scrollView: self,
-                                        indicatorColor: UIColor.blue,
-                                        shadeColor: UIColor.black,
-                                        paths: indicatorArray)
+    self.scrollIndicator = EAScrollIndicator(scrollView: self,
+                                             indicatorColor: UIColor.blue,
+                                             shadeColor: UIColor.black,
+                                             paths: [])
+    changeIndicatorPoints(from: 0)
   }
   
+  fileprivate func changeIndicatorPoints(from indexRow:Int)
+  {
+    for i in (indexRow..<self.dataArray.count)
+    {
+      if i < (self.scrollIndicator.points?.count)!
+      {
+        self.scrollIndicator.points![i] = EAIndicatorPoint(title: self.dataArray[i].title,
+                                                           location: self.rectForRow(at: IndexPath(row: i, section: 0)).minY)
+      }
+      else
+      {
+        self.scrollIndicator.points?.append(EAIndicatorPoint(title: self.dataArray[i].title,
+                                                             location: self.rectForRow(at: IndexPath(row: i, section: 0)).minY))
+      }
+    }
+  }
   public override func didMoveToSuperview()
   {
-    addScrollIndicator()
+    //addScrollIndicator()
   }
 }

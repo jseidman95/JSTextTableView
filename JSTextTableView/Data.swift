@@ -41,10 +41,12 @@ public struct AttributedTextData:CellData
 {
   public var isExpanded:Bool
   public var attributedText:NSAttributedString
+  public var title:String
 }
 
 public struct RegularTextData:CellData
 {
   public var isExpanded:Bool
   public var text:String
+  public var title:String
 }

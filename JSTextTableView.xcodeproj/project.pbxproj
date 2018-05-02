@@ -15,7 +15,6 @@
 		42123C7420811FF400E268C1 /* JSTextTableViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42123C7320811FF400E268C1 /* JSTextTableViewTests.swift */; };
 		42123C7F20811FF400E268C1 /* JSTextTableViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42123C7E20811FF400E268C1 /* JSTextTableViewUITests.swift */; };
 		42123C8D2081205500E268C1 /* JSTextTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42123C8C2081205500E268C1 /* JSTextTableView.swift */; };
-		42123C8F2081213100E268C1 /* shachritAshkinaz.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 42123C8E2081213100E268C1 /* shachritAshkinaz.rtf */; };
 		42123C912081215500E268C1 /* Cells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42123C902081215500E268C1 /* Cells.swift */; };
 		42123C952081558000E268C1 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42123C942081558000E268C1 /* Data.swift */; };
 		42DE987120902D1E0065DDD6 /* RotatingArrowView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42DE987020902D1E0065DDD6 /* RotatingArrowView.framework */; };
@@ -59,7 +58,6 @@
 		42123C7E20811FF400E268C1 /* JSTextTableViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSTextTableViewUITests.swift; sourceTree = "<group>"; };
 		42123C8020811FF400E268C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		42123C8C2081205500E268C1 /* JSTextTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSTextTableView.swift; sourceTree = "<group>"; };
-		42123C8E2081213100E268C1 /* shachritAshkinaz.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = shachritAshkinaz.rtf; sourceTree = "<group>"; };
 		42123C902081215500E268C1 /* Cells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cells.swift; sourceTree = "<group>"; };
 		42123C942081558000E268C1 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		42DE987020902D1E0065DDD6 /* RotatingArrowView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RotatingArrowView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -142,7 +140,6 @@
 				42123C6520811FF400E268C1 /* Assets.xcassets */,
 				42123C6720811FF400E268C1 /* LaunchScreen.storyboard */,
 				42123C6A20811FF400E268C1 /* Info.plist */,
-				42123C8E2081213100E268C1 /* shachritAshkinaz.rtf */,
 				42123C8C2081205500E268C1 /* JSTextTableView.swift */,
 				42123C902081215500E268C1 /* Cells.swift */,
 				42123C942081558000E268C1 /* Data.swift */,
@@ -298,7 +295,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				42123C6920811FF400E268C1 /* LaunchScreen.storyboard in Resources */,
-				42123C8F2081213100E268C1 /* shachritAshkinaz.rtf in Resources */,
 				42123C6620811FF400E268C1 /* Assets.xcassets in Resources */,
 				42123C6420811FF400E268C1 /* Main.storyboard in Resources */,
 			);

@@ -111,7 +111,6 @@ class CircleView:UIView
       let circleLayer = CAShapeLayer()
       circleLayer.fillColor = UIColor.white.cgColor
       circleLayer.path = path.cgPath
-      circleLayer.shouldRasterize = true
       
       // make shadow
       let shadowCircleLayer = CAShapeLayer()

@@ -50,6 +50,15 @@ internal class TextCell:UITableViewCell
   }
 }
 
+class InsetLabel:UILabel
+{
+  override func drawText(in rect: CGRect)
+  {
+    let insets = UIEdgeInsets.init(top: 5, left: 0, bottom: 5, right: 0)
+    super.drawText(in: UIEdgeInsetsInsetRect(rect, insets))
+  }
+}
+
 internal class ExpandingTriggerCell:UITableViewCell
 {
   // lets
@@ -135,14 +144,5 @@ internal class ExpandingTriggerCell:UITableViewCell
     centerView.translatesAutoresizingMaskIntoConstraints = false
     centerView.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
     centerView.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
-  }
-}
-
-class InsetLabel:UILabel
-{
-  override func drawText(in rect: CGRect)
-  {
-    let insets = UIEdgeInsets.init(top: 5, left: 0, bottom: 5, right: 0)
-    super.drawText(in: UIEdgeInsetsInsetRect(rect, insets))
   }
 }
