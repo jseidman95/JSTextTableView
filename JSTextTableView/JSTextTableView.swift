@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class JSTextTableView: UITableView
+open class JSTextTableView: UITableView
 {
   // lets
   // private final let
