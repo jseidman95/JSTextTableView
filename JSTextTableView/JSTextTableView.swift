@@ -109,7 +109,7 @@ open class JSTextTableView: UITableView
 // deal with orientation
 extension JSTextTableView
 {
-  public override func layoutSubviews()
+  open override func layoutSubviews()
   {
     if UIDevice.current.orientation != lastOrientation
     {
