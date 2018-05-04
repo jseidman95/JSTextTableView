@@ -12,10 +12,10 @@ import RotatingArrowView
 public class TextCell:UITableViewCell
 {
   // lets
-  internal let label = InsetLabel()
+  public let label = InsetLabel()
 
   // vars
-  internal var isExpanded = true
+  public var isExpanded = true
   
   // inits
   override public init(style: UITableViewCellStyle,
@@ -62,10 +62,10 @@ public class InsetLabel:UILabel
 public class ExpandingTriggerCell:UITableViewCell
 {
   // lets
-  // internal
-  internal var mainView = UIView()
-  internal var arrowView:RotatingArrowView? = nil
-  internal var titleLabel = UILabel()
+  // public
+  public var mainView = UIView()
+  public var arrowView:RotatingArrowView? = nil
+  public var titleLabel = UILabel()
   
   // inits
   public override init(style: UITableViewCellStyle,
