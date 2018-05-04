@@ -20,6 +20,7 @@ open class JSTextTableView: UITableView
   private var cellHeightDictionary:[IndexPath:CGFloat] = [:]
   private var dataArray = [CellData]()
   private var lastOrientation:UIDeviceOrientation = .portrait
+  private var fontPinchGesture:UIPinchGestureRecognizer = UIPinchGestureRecognizer()
   
   // open static
   open static var arrowColor:UIColor = UIColor.blue
@@ -56,6 +57,10 @@ open class JSTextTableView: UITableView
     
     // set initial orientation
     lastOrientation = UIDevice.current.orientation
+    
+    // make pinch gesture
+    fontPinchGesture.addTarget(self, action: #selector(pinchToZoomText(pinchRecog:)))
+    self.addGestureRecognizer(fontPinchGesture)
   }
   
   // methods to add data to text tableview
@@ -245,5 +250,14 @@ extension JSTextTableView: UITableViewDelegate
       }
       else { return UITableViewAutomaticDimension }
     }
+  }
+}
+
+// pinch
+extension JSTextTableView
+{
+  @objc fileprivate func pinchToZoomText(pinchRecog:UIPinchGestureRecognizer)
+  {
+    print(pinchRecog.scale)
   }
 }
