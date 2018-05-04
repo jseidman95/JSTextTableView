@@ -25,14 +25,14 @@ open class JSTextTableView: UITableView
   open static var arrowColor:UIColor = UIColor.blue
   
   // inits
-  open override init(frame: CGRect, style: UITableViewStyle)
+  public override init(frame: CGRect, style: UITableViewStyle)
   {
     super.init(frame: frame, style: style)
     
     startUp()
   }
   
-  open required init?(coder aDecoder: NSCoder)
+  public required init?(coder aDecoder: NSCoder)
   {
     super.init(coder: aDecoder)
     
