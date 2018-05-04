@@ -9,7 +9,7 @@
 import UIKit
 import RotatingArrowView
 
-internal class TextCell:UITableViewCell
+public class TextCell:UITableViewCell
 {
   // lets
   internal let label = InsetLabel()
@@ -18,7 +18,7 @@ internal class TextCell:UITableViewCell
   internal var isExpanded = true
   
   // inits
-  override internal init(style: UITableViewCellStyle,
+  override public init(style: UITableViewCellStyle,
                          reuseIdentifier: String?)
   {
     super.init(style: style,
@@ -29,7 +29,7 @@ internal class TextCell:UITableViewCell
     self.selectionStyle = .none
   }
   
-  required init?(coder aDecoder: NSCoder)
+  required public init?(coder aDecoder: NSCoder)
   {
     fatalError("init(coder:) has not been implemented")
   }
@@ -50,16 +50,16 @@ internal class TextCell:UITableViewCell
   }
 }
 
-class InsetLabel:UILabel
+public class InsetLabel:UILabel
 {
-  override func drawText(in rect: CGRect)
+  override public func drawText(in rect: CGRect)
   {
     let insets = UIEdgeInsets.init(top: 5, left: 0, bottom: 5, right: 0)
     super.drawText(in: UIEdgeInsetsInsetRect(rect, insets))
   }
 }
 
-internal class ExpandingTriggerCell:UITableViewCell
+public class ExpandingTriggerCell:UITableViewCell
 {
   // lets
   // internal
@@ -68,7 +68,7 @@ internal class ExpandingTriggerCell:UITableViewCell
   internal var titleLabel = UILabel()
   
   // inits
-  internal override init(style: UITableViewCellStyle,
+  public override init(style: UITableViewCellStyle,
                          reuseIdentifier: String?)
   {
     super.init(style: style,
@@ -77,7 +77,7 @@ internal class ExpandingTriggerCell:UITableViewCell
     self.startUp()
   }
   
-  internal required init?(coder aDecoder: NSCoder)
+  public required init?(coder aDecoder: NSCoder)
   {
     fatalError("init(coder:) has not been implemented")
   }
