@@ -21,18 +21,18 @@ open class JSTextTableView: UITableView
   private var dataArray = [CellData]()
   private var lastOrientation:UIDeviceOrientation = .portrait
   
-  // public static
-  public static var arrowColor:UIColor = UIColor.blue
+  // open static
+  open static var arrowColor:UIColor = UIColor.blue
   
   // inits
-  public override init(frame: CGRect, style: UITableViewStyle)
+  open override init(frame: CGRect, style: UITableViewStyle)
   {
     super.init(frame: frame, style: style)
     
     startUp()
   }
   
-  public required init?(coder aDecoder: NSCoder)
+  open required init?(coder aDecoder: NSCoder)
   {
     super.init(coder: aDecoder)
     
@@ -128,13 +128,13 @@ extension JSTextTableView
 
 extension JSTextTableView: UITableViewDataSource
 {
-  public func tableView(_ tableView: UITableView,
+  open func tableView(_ tableView: UITableView,
                         numberOfRowsInSection section: Int) -> Int
   {
     return self.dataArray.count
   }
   
-  public func tableView(_ tableView: UITableView,
+  open func tableView(_ tableView: UITableView,
                         cellForRowAt indexPath: IndexPath) -> UITableViewCell
   {
     if dataArray[indexPath.row] is ExpandingTriggerData
@@ -182,19 +182,19 @@ extension JSTextTableView: UITableViewDataSource
 
 extension JSTextTableView: UITableViewDelegate
 {
-  public func tableView(_ tableView: UITableView,
+  open func tableView(_ tableView: UITableView,
                         heightForRowAt indexPath: IndexPath) -> CGFloat
   {
     return getHeightForCell(tableView, indexPath: indexPath)
   }
 
-  public func tableView(_ tableView: UITableView,
+  open func tableView(_ tableView: UITableView,
                         estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat
   {
     return getHeightForCell(tableView, indexPath: indexPath)
   }
   
-  public func tableView(_ tableView: UITableView,
+  open func tableView(_ tableView: UITableView,
                         willDisplay cell: UITableViewCell,
                         forRowAt indexPath: IndexPath)
   {
@@ -208,7 +208,7 @@ extension JSTextTableView: UITableViewDelegate
     }
   }
 
-  public func tableView(_ tableView: UITableView,
+  open func tableView(_ tableView: UITableView,
                         didSelectRowAt indexPath: IndexPath)
   {
     if dataArray[indexPath.row] is ExpandingTriggerData
