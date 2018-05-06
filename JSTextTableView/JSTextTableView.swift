@@ -47,7 +47,7 @@ open class JSTextTableView: UITableView
     // set delegate and datasourse
     self.dataSource = self
     self.delegate   = self
-
+    
     // registers cells
     self.register(TextCell.self,
                   forCellReuseIdentifier: TEXT_CELL_IDENTIFIER)
@@ -110,7 +110,7 @@ open class JSTextTableView: UITableView
                                   attributedText: attributedText,
                                   title: title)
     data.title = title
-
+    
     // append data
     dataArray.append(data)
   }
@@ -139,18 +139,18 @@ extension JSTextTableView
 extension JSTextTableView: UITableViewDataSource
 {
   open func tableView(_ tableView: UITableView,
-                        numberOfRowsInSection section: Int) -> Int
+                      numberOfRowsInSection section: Int) -> Int
   {
     return self.dataArray.count
   }
   
   open func tableView(_ tableView: UITableView,
-                        cellForRowAt indexPath: IndexPath) -> UITableViewCell
+                      cellForRowAt indexPath: IndexPath) -> UITableViewCell
   {
     if dataArray[indexPath.row] is ExpandingTriggerData
     {
       let cell = tableView.dequeueReusableCell(withIdentifier: EXPANDABLE_TRIGGER_CELL_IDENTIFIER) as? ExpandingTriggerCell
-
+      
       // set arrow
       if dataArray[indexPath.row + 1].isExpanded
       {
@@ -162,7 +162,7 @@ extension JSTextTableView: UITableViewDataSource
         cell?.arrowView?.setArrowUp()
         cell?.arrowView?.layoutIfNeeded()
       }
-    
+      
       // set label
       cell?.titleLabel.text = dataArray[indexPath.row].title
       
@@ -197,20 +197,20 @@ extension JSTextTableView: UITableViewDataSource
 extension JSTextTableView: UITableViewDelegate
 {
   open func tableView(_ tableView: UITableView,
-                        heightForRowAt indexPath: IndexPath) -> CGFloat
-  {
-    return getHeightForCell(tableView, indexPath: indexPath)
-  }
-
-  open func tableView(_ tableView: UITableView,
-                        estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat
+                      heightForRowAt indexPath: IndexPath) -> CGFloat
   {
     return getHeightForCell(tableView, indexPath: indexPath)
   }
   
   open func tableView(_ tableView: UITableView,
-                        willDisplay cell: UITableViewCell,
-                        forRowAt indexPath: IndexPath)
+                      estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat
+  {
+    return getHeightForCell(tableView, indexPath: indexPath)
+  }
+  
+  open func tableView(_ tableView: UITableView,
+                      willDisplay cell: UITableViewCell,
+                      forRowAt indexPath: IndexPath)
   {
     if dataArray[indexPath.row] is ExpandingTriggerData
     {
@@ -221,9 +221,9 @@ extension JSTextTableView: UITableViewDelegate
       cellHeightDictionary[indexPath]   = cell.frame.height
     }
   }
-
+  
   open func tableView(_ tableView: UITableView,
-                        didSelectRowAt indexPath: IndexPath)
+                      didSelectRowAt indexPath: IndexPath)
   {
     if dataArray[indexPath.row] is ExpandingTriggerData
     {
@@ -233,7 +233,7 @@ extension JSTextTableView: UITableViewDelegate
       
       // get cell to trigger its arrow movement
       let cell = tableView.cellForRow(at: indexPath) as! ExpandingTriggerCell
-
+      
       // animate expanding/contracting and arrow movement
       cell.arrowView?.spinArrow()
       tableView.performBatchUpdates(nil)
@@ -274,7 +274,7 @@ extension JSTextTableView: UITableViewDelegate
       for _ in (0...24)
       {
         self.addNonExpandableAttributedText(attributedText: attributedStringWithRtf,
-                                         title: "HEYO")
+                                            title: "HEYO")
       }
       self.reloadData()
     }
@@ -284,36 +284,59 @@ extension JSTextTableView: UITableViewDelegate
 // pinch
 extension JSTextTableView
 {
-  @objc fileprivate func pinchToZoomText(pinchRecog:UIPinchGestureRecognizer)
+  @objc fileprivate func pinchToZoomText(pinchRecog: UIPinchGestureRecognizer)
   {
-    let newSize = fontSize + (pinchRecog.velocity > 0 ? 1 : -1) * 2
-
-    if newSize < 70.0 && newSize > 8.0
+    
+    if(pinchRecog.state == .began)
     {
-      fontSize = newSize
-
-      cellHeightDictionary = [:]
-      
-      updateVisibleCells()
     }
+    else if(pinchRecog.state == .changed)
+    {
+      
+      let newSize = (pinchRecog.velocity > 0 ? 1 : -1) * 1 + fontSize
+      
+      if newSize < 70.0 && newSize > 8.0
+      {
+        fontSize = newSize
+        updateVisibleCells()
+      }
+      
+    }
+    else
+    {
+      print("END")
+    }
+    
   }
   
   private func updateVisibleCells()
   {
+    
     UIView.performWithoutAnimation {
-      self.beginUpdates()
       for cell in self.visibleCells
       {
         if let textCell = cell as? TextCell
         {
-          let indexPath = self.indexPath(for: textCell)
-          let data = self.dataArray[(indexPath?.row)!] as! AttributedTextData
-          let mutableString = NSMutableAttributedString(attributedString: data.attributedText)
-          mutableString.addAttributes([NSAttributedStringKey.font:UIFont.systemFont(ofSize: fontSize)], range: NSMakeRange(0, mutableString.length))
-          textCell.label.attributedText = mutableString
+          if let indexPath = self.indexPath(for: textCell), let data = self.dataArray[(indexPath.row)] as? AttributedTextData
+          {
+            let mutableString = NSMutableAttributedString(attributedString: data.attributedText)
+            mutableString.addAttributes([NSAttributedStringKey.font:UIFont.systemFont(ofSize: fontSize)], range: NSMakeRange(0, mutableString.length))
+            textCell.label.attributedText = mutableString
+            
+            self.beginUpdates()
+            cellHeightDictionary[indexPath] = textCell.label.attributedText?.height(withConstrainedWidth: self.frame.width)
+            self.endUpdates()
+          }
         }
       }
-      self.endUpdates()
     }
+  }
+}
+extension NSAttributedString {
+  func height(withConstrainedWidth width: CGFloat) -> CGFloat {
+    let constraintRect = CGSize(width: width, height: .greatestFiniteMagnitude)
+    let boundingBox = boundingRect(with: constraintRect, options: .usesLineFragmentOrigin, context: nil)
+    
+    return ceil(boundingBox.height)
   }
 }
