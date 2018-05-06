@@ -9,7 +9,7 @@
 import UIKit
 
 // super protocols
-internal protocol CellData
+public protocol CellData
 {
   var isExpanded:Bool { get set }
   var title:String    { get set }
@@ -18,13 +18,13 @@ internal protocol CellData
 // we do this so when the [CellData] is accessed the values can be changed without downcasting
 extension CellData
 {
-  var isExpanded:Bool
+  public var isExpanded:Bool
   {
     get { return true }
     set {}
   }
   
-  var title:String
+  public var title:String
   {
     get { return "" }
     set {}
@@ -32,7 +32,7 @@ extension CellData
 }
 
 // usable structs
-internal struct ExpandingTriggerData:CellData
+public struct ExpandingTriggerData:CellData
 {
   public var title:String
 }
