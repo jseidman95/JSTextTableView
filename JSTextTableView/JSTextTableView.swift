@@ -22,10 +22,11 @@ open class JSTextTableView: UITableView
   // public
   public var fontSize:CGFloat = 15.0
   public var defaultFont:UIFont = UIFont.systemFont(ofSize: 15.0)
+  public var cellHeightDictionary:[IndexPath:CGFloat] = [:]
   
   // public get private set
   public private(set) var dataArray = [CellData]()
-  public private(set) var cellHeightDictionary:[IndexPath:CGFloat] = [:]
+
   // public static
   public static var arrowColor:UIColor = UIColor.blue
   
