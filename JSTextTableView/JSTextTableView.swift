@@ -14,6 +14,7 @@ open class JSTextTableView: UITableView
   // private final let
   private final let TEXT_CELL_IDENTIFIER = "textCell"
   private final let EXPANDABLE_TRIGGER_CELL_IDENTIFIER = "expandableTriggerCell"
+  private final let defaultFontSize:CGFloat = 15.0
   
   // vars
   // private
@@ -21,6 +22,7 @@ open class JSTextTableView: UITableView
   private var dataArray = [CellData]()
   private var lastOrientation:UIDeviceOrientation = .portrait
   private var fontPinchGesture:UIPinchGestureRecognizer = UIPinchGestureRecognizer()
+  private var fontSize:CGFloat = 15.0
   
   // open static
   open static var arrowColor:UIColor = UIColor.blue
@@ -61,6 +63,9 @@ open class JSTextTableView: UITableView
     // make pinch gesture
     fontPinchGesture.addTarget(self, action: #selector(pinchToZoomText(pinchRecog:)))
     self.addGestureRecognizer(fontPinchGesture)
+    
+    // add test data
+    addTestData()
   }
   
   // methods to add data to text tableview
@@ -105,7 +110,7 @@ open class JSTextTableView: UITableView
                                   attributedText: attributedText,
                                   title: title)
     data.title = title
-    print(data.title)
+
     // append data
     dataArray.append(data)
   }
@@ -168,6 +173,7 @@ extension JSTextTableView: UITableViewDataSource
       let cell = tableView.dequeueReusableCell(withIdentifier: TEXT_CELL_IDENTIFIER) as? TextCell
       
       cell?.label.text = data.text
+      
       cell?.isExpanded = data.isExpanded
       
       return cell!
@@ -176,7 +182,10 @@ extension JSTextTableView: UITableViewDataSource
     {
       let cell = tableView.dequeueReusableCell(withIdentifier: TEXT_CELL_IDENTIFIER) as? TextCell
       
-      cell?.label.attributedText = data.attributedText
+      let mutableString = NSMutableAttributedString(attributedString: data.attributedText)
+      mutableString.addAttributes([NSAttributedStringKey.font:UIFont.systemFont(ofSize: fontSize)], range: NSMakeRange(0, mutableString.length))
+      cell?.label.attributedText = mutableString
+      
       cell?.isExpanded = data.isExpanded
       
       return cell!
@@ -248,7 +257,26 @@ extension JSTextTableView: UITableViewDelegate
       {
         return 75.0
       }
-      else { return UITableViewAutomaticDimension }
+      else
+      {
+        return UITableViewAutomaticDimension
+      }
+    }
+  }
+  
+  private func addTestData()
+  {
+    if let rtfPath = Bundle.main.url(forResource: "testShacharit", withExtension: "rtf")
+    {
+      
+      let attributedStringWithRtf: NSAttributedString = try! NSAttributedString(url: rtfPath, options: [NSAttributedString.DocumentReadingOptionKey.documentType: NSAttributedString.DocumentType.rtf], documentAttributes: nil)
+      
+      for _ in (0...24)
+      {
+        self.addNonExpandableAttributedText(attributedText: attributedStringWithRtf,
+                                         title: "HEYO")
+      }
+      self.reloadData()
     }
   }
 }
@@ -258,6 +286,34 @@ extension JSTextTableView
 {
   @objc fileprivate func pinchToZoomText(pinchRecog:UIPinchGestureRecognizer)
   {
-    print(pinchRecog.scale)
+    let newSize = fontSize + (pinchRecog.velocity > 0 ? 1 : -1) * 2
+
+    if newSize < 70.0 && newSize > 8.0
+    {
+      fontSize = newSize
+
+      cellHeightDictionary = [:]
+      
+      updateVisibleCells()
+    }
+  }
+  
+  private func updateVisibleCells()
+  {
+    UIView.performWithoutAnimation {
+      self.beginUpdates()
+      for cell in self.visibleCells
+      {
+        if let textCell = cell as? TextCell
+        {
+          let indexPath = self.indexPath(for: textCell)
+          let data = self.dataArray[(indexPath?.row)!] as! AttributedTextData
+          let mutableString = NSMutableAttributedString(attributedString: data.attributedText)
+          mutableString.addAttributes([NSAttributedStringKey.font:UIFont.systemFont(ofSize: fontSize)], range: NSMakeRange(0, mutableString.length))
+          textCell.label.attributedText = mutableString
+        }
+      }
+      self.endUpdates()
+    }
   }
 }

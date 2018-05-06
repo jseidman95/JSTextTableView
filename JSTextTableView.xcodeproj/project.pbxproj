@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		420C368A209CB68C001C117F /* testShacharit.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 420C3689209CB68B001C117F /* testShacharit.rtf */; };
 		42123C5F20811FF400E268C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42123C5E20811FF400E268C1 /* AppDelegate.swift */; };
 		42123C6120811FF400E268C1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42123C6020811FF400E268C1 /* ViewController.swift */; };
 		42123C6420811FF400E268C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42123C6220811FF400E268C1 /* Main.storyboard */; };
@@ -44,6 +45,7 @@
 		14D556E468F09FBBB003F076 /* Pods_JSTextTableViewUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JSTextTableViewUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2739EFE918AF83B1F5D718E1 /* Pods-JSTextTableViewUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JSTextTableViewUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JSTextTableViewUITests/Pods-JSTextTableViewUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		2F5A513F91B4DE1AB36540EE /* Pods-JSTextTableView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JSTextTableView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JSTextTableView/Pods-JSTextTableView.debug.xcconfig"; sourceTree = "<group>"; };
+		420C3689209CB68B001C117F /* testShacharit.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = testShacharit.rtf; sourceTree = "<group>"; };
 		42123C5B20811FF400E268C1 /* JSTextTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JSTextTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42123C5E20811FF400E268C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		42123C6020811FF400E268C1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 		42123C5D20811FF400E268C1 /* JSTextTableView */ = {
 			isa = PBXGroup;
 			children = (
+				420C3689209CB68B001C117F /* testShacharit.rtf */,
 				42123C5E20811FF400E268C1 /* AppDelegate.swift */,
 				42123C6020811FF400E268C1 /* ViewController.swift */,
 				42123C6220811FF400E268C1 /* Main.storyboard */,
@@ -296,6 +299,7 @@
 			files = (
 				42123C6920811FF400E268C1 /* LaunchScreen.storyboard in Resources */,
 				42123C6620811FF400E268C1 /* Assets.xcassets in Resources */,
+				420C368A209CB68C001C117F /* testShacharit.rtf in Resources */,
 				42123C6420811FF400E268C1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

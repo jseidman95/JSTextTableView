@@ -12,7 +12,7 @@ import RotatingArrowView
 public class TextCell:UITableViewCell
 {
   // lets
-  public let label = InsetLabel()
+  public let label = UILabel()
 
   // vars
   public var isExpanded = true
@@ -47,15 +47,6 @@ public class TextCell:UITableViewCell
     label.rightAnchor.constraint(equalTo:  self.rightAnchor).isActive  = true
     label.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
     label.topAnchor.constraint(equalTo:    self.topAnchor).isActive    = true
-  }
-}
-
-public class InsetLabel:UILabel
-{
-  override public func drawText(in rect: CGRect)
-  {
-    let insets = UIEdgeInsets.init(top: 5, left: 0, bottom: 5, right: 0)
-    super.drawText(in: UIEdgeInsetsInsetRect(rect, insets))
   }
 }
 
