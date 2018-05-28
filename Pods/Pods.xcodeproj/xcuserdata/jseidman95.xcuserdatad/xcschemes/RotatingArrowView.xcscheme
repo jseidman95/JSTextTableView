@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "844BC51D3E6194CC8D4F4212E28D6E68"
+               BlueprintIdentifier = "2CA7074627929BB27196F7BF02EF9F41"
                BlueprintName = "RotatingArrowView"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "RotatingArrowView.framework">

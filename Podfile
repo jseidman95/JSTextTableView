@@ -7,7 +7,7 @@ target 'JSTextTableView' do
 
   # Pods for JSTextTableView
   pod 'RotatingArrowView'
-  pod 'JSRotatingView', :git => 'https://github.com/jseidman95/JSRotatingView.git'
+  pod 'JSRotatingView'
   target 'JSTextTableViewTests' do
     inherit! :search_paths
     # Pods for testing

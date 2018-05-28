@@ -3,22 +3,18 @@ PODS:
   - RotatingArrowView (0.1.4)
 
 DEPENDENCIES:
-  - JSRotatingView (from `https://github.com/jseidman95/JSRotatingView.git`)
+  - JSRotatingView
   - RotatingArrowView
 
-EXTERNAL SOURCES:
-  JSRotatingView:
-    :git: https://github.com/jseidman95/JSRotatingView.git
-
-CHECKOUT OPTIONS:
-  JSRotatingView:
-    :commit: b7266b2aaf86906ccea1483766956ab71f125d6a
-    :git: https://github.com/jseidman95/JSRotatingView.git
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - JSRotatingView
+    - RotatingArrowView
 
 SPEC CHECKSUMS:
   JSRotatingView: 8d4c5820db7db7adc6e1bcf44e5d7b0cc3935316
   RotatingArrowView: 2b858fdc18f3718790845f4a3b33fab39619bfb5
 
-PODFILE CHECKSUM: 6c08a0e1f25ae6d08a11e4cc627a982a8d12ce6a
+PODFILE CHECKSUM: 77274c5838136185801319d7c37c59c7db9441a0
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.3

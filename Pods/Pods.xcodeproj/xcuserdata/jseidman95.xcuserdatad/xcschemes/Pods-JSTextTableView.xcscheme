@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A8D1D0530E30D362414933A1ED4F1055"
+               BlueprintIdentifier = "0AF849AE339C678109BB9B31F834EC52"
                BuildableName = "Pods_JSTextTableView.framework"
                BlueprintName = "Pods-JSTextTableView"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A8D1D0530E30D362414933A1ED4F1055"
+            BlueprintIdentifier = "0AF849AE339C678109BB9B31F834EC52"
             BuildableName = "Pods_JSTextTableView.framework"
             BlueprintName = "Pods-JSTextTableView"
             ReferencedContainer = "container:Pods.xcodeproj">

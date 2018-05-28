@@ -1,0 +1,6 @@
+framework module JSRotatingView {
+  umbrella header "JSRotatingView-umbrella.h"
+
+  export *
+  module * { export * }
+}

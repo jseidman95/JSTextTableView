@@ -4,33 +4,40 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods-JSTextTableView.xcscheme</key>
+		<key>JSRotatingView.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
-		<key>Pods-JSTextTableViewTests.xcscheme</key>
+		<key>Pods-JSTextTableView.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
-		<key>Pods-JSTextTableViewUITests.xcscheme</key>
+		<key>Pods-JSTextTableViewTests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
-		<key>RotatingArrowView.xcscheme</key>
+		<key>Pods-JSTextTableViewUITests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>3</integer>
+		</dict>
+		<key>RotatingArrowView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>4</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
