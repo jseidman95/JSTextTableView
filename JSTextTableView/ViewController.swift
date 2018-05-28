@@ -29,15 +29,21 @@ class ViewController: UIViewController
   
   private func addTestData()
   {
-    if let rtfPath = Bundle.main.url(forResource: "testShacharit", withExtension: "rtf")
+    if let rtfPath = Bundle.main.url(forResource: "testShacharit", withExtension: "rtf"),
+       let rtfPath2 = Bundle.main.url(forResource: "test", withExtension: "rtf")
     {
       
       let attributedStringWithRtf: NSAttributedString = try! NSAttributedString(url: rtfPath, options: [NSAttributedString.DocumentReadingOptionKey.documentType: NSAttributedString.DocumentType.rtf], documentAttributes: nil)
+      let attributedStringWithRtf2: NSAttributedString = try! NSAttributedString(url: rtfPath2, options: [NSAttributedString.DocumentReadingOptionKey.documentType: NSAttributedString.DocumentType.rtf], documentAttributes: nil)
       
       for _ in (0...24)
       {
-        jstv.addNonExpandableRegularText(text: attributedStringWithRtf.string, title: "WHATTUP")
-        jstv.addExpandableAttributedText(attributedText: attributedStringWithRtf, isExpanded: true,
+        jstv.addNonExpandableAttributedText(attributedText: attributedStringWithRtf2, title: "EYO")
+        jstv.addExpandableAttributedText(attributedText: [attributedStringWithRtf,
+                                                          attributedStringWithRtf,
+                                                          attributedStringWithRtf,
+                                                          attributedStringWithRtf,
+                                                          attributedStringWithRtf], isExpanded: true,
                                          title: "HEYO")
       }
       jstv.reloadData()

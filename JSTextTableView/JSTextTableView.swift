@@ -62,24 +62,32 @@ open class JSTextTableView: UITableView
   }
   
   // methods to add data to text tableview
-  public func addExpandableRegularText(text:String,
+  public func addExpandableRegularText(text:[String],
                                        isExpanded:Bool,
                                        title:String)
   {
-    dataArray.append(ExpandingTriggerData(title: title))
-    dataArray.append(RegularTextData(isExpanded: isExpanded,
-                                     text: text,
-                                     title: title))
+    dataArray.append(ExpandingTriggerData(title: title, expandingCellCount: text.count))
+    for textString in text
+    {
+      dataArray.append(RegularTextData(isExpanded: isExpanded,
+                                       text: textString,
+                                       title: title,
+                                       isGray: true))
+    }
   }
   
-  public func addExpandableAttributedText(attributedText:NSAttributedString,
+  public func addExpandableAttributedText(attributedText:[NSAttributedString],
                                           isExpanded:Bool,
                                           title:String)
   {
-    dataArray.append(ExpandingTriggerData(title: title))
-    dataArray.append(AttributedTextData(isExpanded: isExpanded,
-                                        attributedText: attributedText,
-                                        title: title))
+    dataArray.append(ExpandingTriggerData(title: title, expandingCellCount: attributedText.count))
+    for attributedTextString in attributedText
+    {
+      dataArray.append(AttributedTextData(isExpanded: isExpanded,
+                                          attributedText: attributedTextString,
+                                          title: title,
+                                          isGray: true))
+    }
   }
   
   public func addNonExpandableRegularText(text:String,
@@ -88,7 +96,8 @@ open class JSTextTableView: UITableView
     // make data
     var data = RegularTextData(isExpanded: true,
                                text: text,
-                               title: title)
+                               title: title,
+                               isGray: false)
     data.title = title
     
     // append data
@@ -101,7 +110,8 @@ open class JSTextTableView: UITableView
     // make data
     var data = AttributedTextData(isExpanded: true,
                                   attributedText: attributedText,
-                                  title: title)
+                                  title: title,
+                                  isGray: false)
     data.title = title
     
     // append data
@@ -174,16 +184,8 @@ extension JSTextTableView: UITableViewDataSource
       cell?.label.text = data.text
       cell?.label.font = defaultFont.withSize(fontSize)
       cell?.isExpanded = data.isExpanded
-      
-      if indexPath.row - 1 >= 0 && dataArray[indexPath.row - 1] is ExpandingTriggerData
-      {
-        cell?.backgroundColor = UIColor.groupTableViewBackground
-      }
-      else
-      {
-        cell?.backgroundColor = UIColor.white
-      }
-      
+      cell?.backgroundColor = (dataArray[indexPath.row].isGray ? UIColor.groupTableViewBackground : UIColor.white)
+
       return cell!
     }
     else if let data = dataArray[indexPath.row] as? AttributedTextData
@@ -194,15 +196,7 @@ extension JSTextTableView: UITableViewDataSource
       mutableString.addAttributes([NSAttributedStringKey.font:defaultFont.withSize(fontSize)], range: NSMakeRange(0, mutableString.length))
       cell?.label.attributedText = mutableString
       cell?.isExpanded = data.isExpanded
-
-      if indexPath.row - 1 >= 0 && dataArray[indexPath.row - 1] is ExpandingTriggerData
-      {
-        cell?.backgroundColor = UIColor.groupTableViewBackground
-      }
-      else
-      {
-        cell?.backgroundColor = UIColor.white
-      }
+      cell?.backgroundColor = (dataArray[indexPath.row].isGray ? UIColor.groupTableViewBackground : UIColor.white)
       
       return cell!
     }
@@ -241,11 +235,14 @@ extension JSTextTableView: UITableViewDelegate
   public func tableView(_ tableView: UITableView,
                         didSelectRowAt indexPath: IndexPath)
   {
-    if dataArray[indexPath.row] is ExpandingTriggerData
+    if let data = dataArray[indexPath.row] as? ExpandingTriggerData
     {
-      // this is done to prevent simultaneous access error, tbh dont really understand that
-      let expanded = dataArray[indexPath.row + 1].isExpanded
-      dataArray[indexPath.row + 1].isExpanded = !expanded
+      // it is split to prevent simultaneous access error, tbh dont really understand that
+      for i in (1...data.expandingCellCount)
+      {
+        let expanded = dataArray[indexPath.row + i].isExpanded
+        dataArray[indexPath.row + i].isExpanded = !expanded
+      }
       
       // get cell to trigger its arrow movement
       let cell = tableView.cellForRow(at: indexPath) as! ExpandingTriggerCell
