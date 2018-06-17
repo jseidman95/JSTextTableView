@@ -38,13 +38,16 @@ class ViewController: UIViewController
       
       for _ in (0...24)
       {
-        jstv.addNonExpandableAttributedText(attributedText: attributedStringWithRtf2, title: "EYO")
+        jstv.addNonExpandableAttributedText(attributedText: attributedStringWithRtf2, title: "EYO",
+                                            alignment: .right)
         jstv.addExpandableAttributedText(attributedText: [attributedStringWithRtf,
                                                           attributedStringWithRtf,
                                                           attributedStringWithRtf,
                                                           attributedStringWithRtf,
-                                                          attributedStringWithRtf], isExpanded: true,
-                                         title: "HEYO")
+                                                          attributedStringWithRtf],
+                                         isExpanded: true,
+                                         title: "HEYO",
+                                         alignment: .right)
       }
       jstv.reloadData()
     }

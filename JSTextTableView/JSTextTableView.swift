@@ -64,7 +64,8 @@ open class JSTextTableView: UITableView
   // methods to add data to text tableview
   public func addExpandableRegularText(text:[String],
                                        isExpanded:Bool,
-                                       title:String)
+                                       title:String,
+                                       alignment:NSTextAlignment)
   {
     dataArray.append(ExpandingTriggerData(title: title, expandingCellCount: text.count))
     for textString in text
@@ -72,13 +73,15 @@ open class JSTextTableView: UITableView
       dataArray.append(RegularTextData(isExpanded: isExpanded,
                                        text: textString,
                                        title: title,
-                                       isGray: true))
+                                       isGray: true,
+                                       alignment: alignment))
     }
   }
   
   public func addExpandableAttributedText(attributedText:[NSAttributedString],
                                           isExpanded:Bool,
-                                          title:String)
+                                          title:String,
+                                          alignment:NSTextAlignment)
   {
     dataArray.append(ExpandingTriggerData(title: title, expandingCellCount: attributedText.count))
     for attributedTextString in attributedText
@@ -86,18 +89,21 @@ open class JSTextTableView: UITableView
       dataArray.append(AttributedTextData(isExpanded: isExpanded,
                                           attributedText: attributedTextString,
                                           title: title,
-                                          isGray: true))
+                                          isGray: true,
+                                          alignment: alignment))
     }
   }
   
   public func addNonExpandableRegularText(text:String,
-                                          title:String)
+                                          title:String,
+                                          alignment:NSTextAlignment)
   {
     // make data
     var data = RegularTextData(isExpanded: true,
                                text: text,
                                title: title,
-                               isGray: false)
+                               isGray: false,
+                               alignment: alignment)
     data.title = title
     
     // append data
@@ -105,13 +111,15 @@ open class JSTextTableView: UITableView
   }
   
   public func addNonExpandableAttributedText(attributedText:NSAttributedString,
-                                             title:String)
+                                             title:String,
+                                             alignment:NSTextAlignment)
   {
     // make data
     var data = AttributedTextData(isExpanded: true,
                                   attributedText: attributedText,
                                   title: title,
-                                  isGray: false)
+                                  isGray: false,
+                                  alignment: alignment)
     data.title = title
     
     // append data
@@ -185,7 +193,8 @@ extension JSTextTableView: UITableViewDataSource
       cell?.label.font = defaultFont.withSize(fontSize)
       cell?.isExpanded = data.isExpanded
       cell?.backgroundColor = (dataArray[indexPath.row].isGray ? UIColor.groupTableViewBackground : UIColor.white)
-
+      cell?.label.textAlignment = dataArray[indexPath.row].alignment
+      
       return cell!
     }
     else if let data = dataArray[indexPath.row] as? AttributedTextData
@@ -197,6 +206,7 @@ extension JSTextTableView: UITableViewDataSource
       cell?.label.attributedText = mutableString
       cell?.isExpanded = data.isExpanded
       cell?.backgroundColor = (dataArray[indexPath.row].isGray ? UIColor.groupTableViewBackground : UIColor.white)
+      cell?.label.textAlignment = dataArray[indexPath.row].alignment
       
       return cell!
     }

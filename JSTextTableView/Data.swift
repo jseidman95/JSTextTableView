@@ -14,6 +14,7 @@ public protocol CellData
   var isExpanded: Bool { get set }
   var title: String    { get set }
   var isGray: Bool     { get set }
+  var alignment:NSTextAlignment { get set }
 }
 
 // we do this so when the [CellData] is accessed the values can be changed without downcasting
@@ -36,6 +37,12 @@ extension CellData
     get { return false }
     set {}
   }
+  
+  public var alignment: NSTextAlignment
+  {
+    get { return .right }
+    set {}
+  }
 }
 
 // usable structs
@@ -51,6 +58,7 @@ public struct AttributedTextData:CellData
   public var attributedText: NSAttributedString
   public var title: String
   public var isGray: Bool
+  public var alignment: NSTextAlignment
 }
 
 public struct RegularTextData:CellData
@@ -59,4 +67,5 @@ public struct RegularTextData:CellData
   public var text: String
   public var title: String
   public var isGray: Bool
+  public var alignment: NSTextAlignment
 }
