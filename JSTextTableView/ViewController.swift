@@ -29,7 +29,7 @@ class ViewController: UIViewController
   
   private func addTestData()
   {
-    if let rtfPath = Bundle.main.url(forResource: "testShacharit", withExtension: "rtf"),
+    if let rtfPath = Bundle.main.url(forResource: "test2", withExtension: "rtf"),
        let rtfPath2 = Bundle.main.url(forResource: "test", withExtension: "rtf")
     {
       
@@ -38,7 +38,7 @@ class ViewController: UIViewController
       
       for _ in (0...24)
       {
-        jstv.addNonExpandableAttributedText(attributedText: attributedStringWithRtf2, title: "EYO",
+        jstv.addNonExpandableAttributedText(attributedText: attributedStringWithRtf2, title: "Expand",
                                             alignment: .right)
         jstv.addExpandableAttributedText(attributedText: [attributedStringWithRtf,
                                                           attributedStringWithRtf,
@@ -46,7 +46,7 @@ class ViewController: UIViewController
                                                           attributedStringWithRtf,
                                                           attributedStringWithRtf],
                                          isExpanded: true,
-                                         title: "HEYO",
+                                         title: "Expand",
                                          alignment: .right)
       }
       jstv.reloadData()
