@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// A tableview that allows the user to dynamically add text data to allow for dynamic loading and quicker view controller load time
 open class JSTextTableView: UITableView
 {
   // lets
@@ -61,7 +62,13 @@ open class JSTextTableView: UITableView
     lastOrientation = UIDevice.current.orientation
   }
   
-  // methods to add data to text tableview
+  /// Allows the user to add an array of expandable regular text cells
+  ///
+  /// - Parameters:
+  ///     - text: The array of the regular text strings to be added
+  ///     - isExpanded: The boolean that tells the tableview if the cells should be expanded from the start
+  ///     - title: The title of the section to be shown on the expanding trigger
+  ///     - alignment: The alignment of the text in the cell
   public func addExpandableRegularText(text:[String],
                                        isExpanded:Bool,
                                        title:String,
@@ -78,6 +85,13 @@ open class JSTextTableView: UITableView
     }
   }
   
+  /// Allows the user to add an array of expandable attributed text cells
+  ///
+  /// - Parameters:
+  ///     - attributedText: The array of the attributed text strings to be added
+  ///     - isExpanded: The boolean that tells the tableview if the cells should be expanded from the start
+  ///     - title: The title of the section to be shown on the expanding trigger
+  ///     - alignment: The alignment of the text in the cell
   public func addExpandableAttributedText(attributedText:[NSAttributedString],
                                           isExpanded:Bool,
                                           title:String,
@@ -94,6 +108,12 @@ open class JSTextTableView: UITableView
     }
   }
   
+  /// Allows the user to add an non expandable regular text cell
+  ///
+  /// - Parameters:
+  ///     - text: The regular text to be added
+  ///     - title: The title of the section
+  ///     - alignment: The alignment of the text in the cell
   public func addNonExpandableRegularText(text:String,
                                           title:String,
                                           alignment:NSTextAlignment)
@@ -110,6 +130,12 @@ open class JSTextTableView: UITableView
     dataArray.append(data)
   }
   
+  /// Allows the user to add an non expandable attributed text cell
+  ///
+  /// - Parameters:
+  ///     - text: The attributed text to be added
+  ///     - title: The title of the section
+  ///     - alignment: The alignment of the text in the cell
   public func addNonExpandableAttributedText(attributedText:NSAttributedString,
                                              title:String,
                                              alignment:NSTextAlignment)
@@ -228,6 +254,7 @@ extension JSTextTableView: UITableViewDelegate
     return getHeightForCell(tableView, indexPath: indexPath)
   }
   
+  // in this function i cache the heights of the cells to eliminate unnecessary calculations in the future
   public func tableView(_ tableView: UITableView,
                         willDisplay cell: UITableViewCell,
                         forRowAt indexPath: IndexPath)
@@ -247,7 +274,7 @@ extension JSTextTableView: UITableViewDelegate
   {
     if let data = dataArray[indexPath.row] as? ExpandingTriggerData
     {
-      // it is split to prevent simultaneous access error, tbh dont really understand that
+      // it is split to prevent simultaneous access error
       for i in (1...data.expandingCellCount)
       {
         let expanded = dataArray[indexPath.row + i].isExpanded
@@ -270,7 +297,7 @@ extension JSTextTableView: UITableViewDelegate
     {
       return 0.0
     }
-    else if let height = cellHeightDictionary[indexPath]
+    else if let height = cellHeightDictionary[indexPath] // use the cached cells
     {
       return height
     }
